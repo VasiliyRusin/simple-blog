@@ -1,0 +1,37 @@
+@import "variables";
+
+@mixin center {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+@mixin button {
+    width: 100%;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+    color: $primary;
+    padding: 10px 20px;
+    border-radius: 6px;
+    background-color: white;
+
+    &.primary {
+        color: white;
+        background-color: $primary;
+    }
+
+    &.new {
+        color: white;
+        background-color: $new;
+    }
+
+    &.delete {
+        color: white;
+        background-color: $delete;
+    }
+
+    @content;
+}
